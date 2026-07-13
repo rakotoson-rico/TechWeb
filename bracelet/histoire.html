@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire-du-Bracelet-brésilien</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Popins', sans-serif;
+            /* LASA MALOKY FAHAFA  */
+            background: linear-gradient(145deg, #fef9f0 0%, #e6f4ea 100%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--color);
+        }
+
+        :root {
+            --color: #2d3e2d;
+            --bg: rgba(255, 255, 255, 0.75);
+        }
+
+        .corps {
+            max-width: 820;
+            width: 100%;
+            padding: 2.5rem 2.8rem;
+            background: var(--bg);
+            /* -webkit-backdrop-filter: blur(8px); */
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 20, 10, 0.12), 0 6px 12px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--bg);
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            border-bottom: 3px dashes #f1c40f;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-width: 700;
+            /* couleur titr  */
+            color: #d45d50a6;
+            letter-spacing: -0.5px;
+            /* text-shadow: 0 2px 4 px rgba(192, 57, 43, 0.10);  */
+        }
+
+        header h1 span {
+            background: linear-gradient(135deg, #e67e22, #f1c40f);
+            --webkit-background-clip: text;
+            --webkit-text-fill-color: tarnsparent;
+            /* mampiditra ny couleur ivalany  */
+            background-clip: text;
+        }
+
+        :root {
+            --bgrd: #ffff;
+            --shadow: 0 20px 40px rgba(0, 20, 10, 0.12), 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        .introduction {
+
+            background: var(--bgrd);
+            padding: 1.8rem 2.2rem;
+            border-left: 10px solid;
+            /* @zay ts d hita d mampiasa rga  */
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.08);
+            border-radius: 18px;
+            margin-bottom: 2.8rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+
+        .introduction strong {
+            color: #c0392b;
+            /* font-weight: 600;  */
+        }
+
+        /* interligne entre section  */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e4a2b;
+            display: inline-block;
+            border-bottom: 0.23rem;
+            /* interligne  */
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2d3e2d;
+            margin-bottom: 1.2rem;
+            font-weight: 300;
+        }
+
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        ul li {
+            background: var(--bg);
+            /* hampisy boity key  */
+            padding: 0.9rem 1.5rem 0.9rem 1.8rem;
+            border-radius: 60px 12px 12px 60px;
+            font-size: 1rem;
+            line-height: 1.6;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            display: flex;
+            align-items: baseline;
+
+        }
+
+        /* farany  */
+        ul li :hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow);
+        }
+
+        ol {
+            list-style: none;
+            counter-increment: etape;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            /* espacmnt  */
+            gap: 1rem;
+
+        }
+
+        ol li {
+            counter-increment: etape;
+            background: var(--bgrd);
+            padding: 1rem 1.8rem 1rem 1.8rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #f0f6f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        ol li :hover {
+            background: #fafff9;
+        }
+
+        ol li ::before {
+            /* mampiseo nim  */
+            content: counter(etape);
+            background: linear-gradient(135deg, #e67e22, #f1c40f);
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            /* bory  */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+            box-shadow: 0 4px 8px rgba(241, 196, 15, 0.03);
+
+        }
+
+        /* liste couleur su postie  */
+        .couleur ul li {
+            background: #ffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            border: 1px solid #ecf3ec;
+            gap: 0.8rem;
+        }
+
+        /* point bory  */
+        .couleur ul li::before {
+            content: " ";
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 2PX solid rgba(0, 0, 0, 0.6);
+            box-shadow: var(--shadow);
+            margin-right: 0.4rem;
+        }
+
+        /* couleurs ndreo  */
+        .couleur ul li:nth-child(1)::before {
+            background: red;
+        }
+
+        .couleur ul li:nth-child(2)::before {
+            background: yellow;
+        }
+
+        .couleur ul li:nth-child(3)::before {
+            background: green;
+        }
+
+        .couleur ul li:nth-child(4)::before {
+            background: blue;
+        }
+
+        .couleur ul li:nth-child(5)::before {
+            background: white;
+        }
+
+        @media(max-width:640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .corps {
+                padding: 1.5rem 1.2rem;
+                border-radius: 24px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .introduction {
+                padding: 1.2rem 1.5rem;
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            ul li,
+            ol li {
+                padding: 0.8rem 1.2rem;
+                border-radius: 14px;
+            }
+
+            .origines ul li ::before {
+                margin-right: 0.6rem;
+            }
+
+            ol li::before {
+                width: 1.8rem;
+                height: 1.8rem;
+                font-size: 0.8rem;
+
+            }
+        }
+
+        @media(max-width) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            corps {
+                padding: 1rem 0.8rem;
+            }
+
+            .introduction {
+                padding: 1rem;
+                border-left-width: 6px;
+            }
+        }
+    </style>
+</head>
+<header>
+    <h1><span>Bracelet Brésilien</span></h1>
+</header>
+
+<body>
+    <div class="corps">
+        <div class="introduction">
+            <p>L'histoire du bracelet brésilien trouve ses racines dans l'artisanat des tribus amazoniennes</p>
+            Qui s'inspire également des fitas ou rubans.Popularisé par les mouvements hippies des années 1960 et 1970,
+            ce
+            bijou tissé est devenu <br><strong> un symbole mondial d'amitié et de chance . </strong>
+        </div>
+
+        <section class="origines">
+            <h2>Origines et légendes</h2>
+
+            <ul>
+                <li><strong>Les racines alméridiennes : </strong>Les peuples autochtones d'Amazonie utilisaient des
+                    technique de tressage de fils coloré pour symboliser l'amour ou l'appartenance à une communauté.
+                </li>
+
+            </ul>
+        </section>
+        <section class="tradition">
+            <h2>Traditions des voeux</h2>
+            <p>La confiance et le port de ce bijou obéissent à des codes bien précis : </p>
+            <ol>
+                <li><strong>La pose : </strong>Le bracelet est attaché au poignet gauche de la personne par un prche qui
+                    formule un voeu.</li>
+                <li><strong>Les noeuds : </strong>Traditionnellement, on attache le bracelet en faisant trois
+                    noeuds,chaque
+                    noeud représentant un voeu secret</li>
+                <li><strong>La réalisation : </strong>Selon la légende, le bracelet ne doit jamais être enlevé.Lorqu'il
+                    s'use et se casse naturellement avec le temps, les voeux sont censés se réaliser.</li>
+            </ol>
+        </section>
+        <section class="couleur">
+
+            <h2>Signification sdes couleurs </h2>
+            <ul>
+                <li><strong>Rouge : </strong>Passion, amour et courage.</li>
+                <li><strong>Jaune : </strong>Succès,richesse et prospérité.</li>
+                <li><strong>Vert : </strong>Espérances, Santé et équilibre.</li>
+                <li><strong>Bleu : </strong>Paix, harmonie et protection spirituelle.</li>
+                <li><strong>Blanc : </strong>Sagesse,pureté et paix interieure</li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'segoe', Helvetica, sans-serif;
+/* hitenn variable d atao @root  */
+    background: var(--bg);
+    color: var(--text);
+    /* interligen  */
+    line-height: 1.6;
+}
+/* ===========variable============= */
+:root{
+    
+    --bg:#fdfaf6;
+    --text:#2d2d2d;
+    --navCouleur:white;
+    --survol1:#a07840;
+    --survol2:#f5ead8;
+    --dore:#c9a96e;
+
+
+/* ============navbar==============  */
+}
+nav{
+    /* espacement interne hb 1rem ,gd 5%  */
+    padding: 1rem 5%;
+    position: sticky;
+    /* haut  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background-color: var(--navCouleur);
+    /* aligmnt  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* @zay tsy miala fa dessus ny rah aby  */
+    z-index: 100;
+    border-radius: 30px;
+}
+nav ul{
+    /* horizontalmnt  */
+    display: flex;
+    align-items: center;
+    /* espacmnt entre les elemnent de la liste  */
+    gap: 0.5rem;
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text);
+    /* hanova ny taille  */
+    font-size: 0.95rem;
+    /* espacxe au tour du lien  */
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    /* animation  */
+    /* transition: background 0.2,color0.2s; */
+}
+nav ul li a:hover{
+    background-color: var(--survol1);
+    /* neny text @survl  */
+    color: var(--survol2);
+}
+.logo{
+    /* halebeh n text  */
+    font-size: 1.8rem;
+    /* taille en gras  */
+    font-weight: 700;
+    color: var(--dore);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+/* =============btn nav bar ============ */
+.navbtn button{
+    /* espace inetrne  */
+    padding: 0.50rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    /* animatio @izy aby  */
+    transform: all 0.2s;
+    /* policeny body ny alany  */
+    font-family: inherit;
+}
+.navbtn:first-of-type button{
+    background: transparent;
+    border: 1px solid var(--dore);
+    color: var(--dore);
+}
+.nav:first-of-type button:hover{
+    background: var(--survol1);
+}
+
+
+.hello{
+    text-align: center;
+    padding: 60px 0;
+    /* padding-bottom: 40px; */
+    /* largeur max  */
+    max-width: 700px;
+    /* centre le block au centre  */
+    margin: 0 auto;
+}
+.hello h1 {
+    /* titre bouda  */
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark);
+    /* epace sous le titre  */
+    margin-bottom: 1rem;
+    /* inter ligne serre  */
+    line-height: 1.2;
+}
+:root{
+    --dark:#1a1a1a;
+    --grisSec:#777;
+}
+.hello p {
+    /* legerment aumngte */
+    font-size: 1.05rem;
+    color: var(--grisSec);
+    /* espace sous paragraphe  */
+    margin-bottom: 2rem;
+    max-width: 500px;
+    /* autre a gauche  */
+    margin-left: auto;
+    /* droite  */
+    margin-top: -15px;
+    margin-right: auto;
+    list-style: none;
+}
+.btn{
+    /* s adapte au contenue  */
+    display: inline-block;
+    background: var(--dore);
+    color:white;
+    text-decoration: none;
+    /*espace  interne  */
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    
+}
+.btn:hover{
+    background: var(--survol1);
+    /* miakatry kely  */
+    transform: translateY(-2px);
+}
+.logo{
+    /* couleur degrade  */
+        background: linear-gradient(120deg,#c9a96e,#ff6b35);
+        /* @text ftn  */
+        -webkit-background-clip: text;
+        background-clip: text;
+        --webkit-text-fill-color:transparent;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.box{
+    /* referer position  */
+    position: relative;
+    width: 160px;
+    height: 220px;
+    margin: 20px auto;
+    transform-style: preserve-3d;
+    /* bouble animation  */
+    animation: animate 25s linear infinite;
+}
+/* animation  */
+@keyframes animate{
+    /* manombjk  */
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+        /* profondeur + DEPAR 0 */
+    }
+    /* TOUR = 360 */
+    100%{
+        transform: perspective(1000px)rotateY(360deg);
+    }
+}
+/* chaque image  */
+.box span{
+/* superpose  */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg))translateZ(400px);
+    /* 45 x 8 = 360   avance 400 px ecrann */
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#004);
+    /* reflet mieoier e  */
+}
+.box span img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* girlle  */
+.grille {
+    display: grid;                                          /* Mise en page en grille CSS */
+    /* min 230 max 1 party egl  */
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); 
+    /* espa    ce entre cadre  */
+    gap: 1.5rem;                                
+    padding: 4rem 5%;                               
+    /* manombkambony        */
+    align-items: start;                                   
+}
+
+.grille .titre {
+    grid-column: 1 / -1;    /*largeur aby */
+    margin-bottom: 0.5rem;  /* Espace sous le titre */
+}
+.titre {
+    margin-top: 120px;
+    /* sous le block  */
+    margin-bottom: 2.5rem;
+}
+.titre h2{
+    /* taille  */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    position: relative;
+    /* permet a after de ne pa deppaser le text  */
+    display: inline-block;  
+    /* espacement sous lez tex  */
+    padding-bottom: 0.5rem;
+}
+.titre h2::after{
+    /* pseudo elemnt vide  */
+    content: ' ';
+    /* par rapport a h2  */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* largeur fixe  */
+    width: 50px;
+    /* epaiasseur  */
+    height: 3px;
+    background: var(--dore);
+    border-radius: 2px;
+}
+.card{
+    background: var(--bg);
+    border-radius: 12px;
+    /* tsy miala n coin arrondi  */
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    /* animation miakatr kel rhf misy pointer  */
+    transition: transform 0.25s,box-shadow 0.25s;
+    cursor: pointer;
+}
+.card:hover{
+    /* monte de 5 px au survol  */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    /* reencadre sans deformation  */
+    object-fit: cover;
+    background-color: var(--dore-clair);
+    display: block;
+}
+.card .description{
+    /* espace interne haut cote bas  */
+    padding: 1rem 1.1rem 1.2rem;
+}
+.card .description h3{
+    /* taill norml @noom produit  */
+    font-size: 1rem;
+    /* semi gras  */
+    font-weight: 600;
+    color: var(--dark);
+    /* espacement sous le titre  */
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.5px;
+}
+.card .description p {
+    /* txt leegrmnt resuirt  */
+    font-size: 0.85rem;
+    color: var(--grisSec);
+    /* interligne pour lisibite  */
+    line-height: 1.5;
+    /* espace aloany prix  */
+    margin-bottom: 0.75rem;
+    /* ilaina @limitn webkit  */
+    display: -webkit-box;
+    /* limite a 3 ligne mùax  */
+    -webkit-line-clamp:3;
+    /* vertical direction pour les chmap  */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.prix{
+    display: inline-block;
+    background: var(--dore-clair);
+    /* taille reduit  */
+    font-size: 0.9rem;
+    /* semi gras  */
+    font-weight: 600;
+    /* espace interne du badge  */
+    padding: 0.25rem 0.75rem;
+    /* hazahon,na forme pillule  */
+    border-radius: 50px;
+    letter-spacing: 0.3px;
+
+}
+/* ==========videp ========== */
+.tuto{
+    /* ESPC INTERNE  */
+    padding: 4rem 5%;
+    background: var(--bg);
+    /* ligne mansaraky  */
+    border-top: 1 solid var(--border);
+}
+.titre-tuto{
+    /* epace @ titre section  */
+    margin-bottom: 2rem;
+}
+.titre-tuto h2{
+    /* mitovy @titre  */
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+.titre-tuto h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* largeur barre deco  */
+    width: 50px;
+    height: 3px;
+    background:var(--dore);
+    border-radius: 2px;
+}
+.video{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    /* espace entre video  */
+    gap: 1.5rem;
+}
+:root{
+    --border:#e8ddd0;
+    --shadow:0 4px 20px rgba(0,0,0,0.08);
+    --dore-clair:#f5ead8;
+}
+.videos{
+    display: flex;
+    gap: 100px;
+    overflow-x: auto;
+
+}
+.videos video{
+    width: 220px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+} 
+/* ==========contact============ */
+.contact{
+    padding: 4rem 5%;
+    background: var(--bg);
+}
+.titre-contact{
+    margin-bottom: 2rem;
+}
+.titre-contact h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+
+/* tonton  */
+/* ========= CONTACT ========= */
+
+.titre-contact h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--dore);
+    border-radius: 2px;
+}
+
+.form-contact{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-contact input,
+.form-contact textarea{
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus{
+    border-color: var(--dore);
+}
+
+/* responsive  */
+@media(max-width:768px){
+    nav{
+        /* lasa vertical  */
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    nav ul {
+        /* passe a la ligne si neccessaire  */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    .hello h1{
+        font-size: 1.9rem;
+    }
+    .box span{
+        /* largeur ,reduit image du caroul  */
+        flex: 0 0 160px;
+        /* hauteur reduit  */
+        height: 210px;
+    }
+    .grille{
+        /* 2colon min @mobile  */
+        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    padding: 2rem 4%;
+    gap: 1rem;
+    }
+}
