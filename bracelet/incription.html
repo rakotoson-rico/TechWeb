@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <style>
+      /* * {
+            margin: 0;
+            padding: 0;
+            font-size: border-box;
+        }
+
+        /* body {
+            display: flex;
+            /* centre  */
+      /* justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        } */
+      /* ha le beh ny ao anatiny  */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      input {
+        width: 100%;
+        padding: 6px;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+
+      fieldset {
+      }
+
+      #btn {
+        margin-top: 15px;
+        text-align: center;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: 49%;
+        padding: 8px;
+      }
+
+      /* 
+        fieldset {
+            background: gainsboro;
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            width: 350px;
+            
+
+            }
+
+        #btn {
+            width: 45%;
+
+        } */
+
+      fieldset {
+        height: 50%;
+        width: 50%;
+        max-width: 350px;
+        border: 2px solid black;
+        padding: 15px;
+        background: rgba(209, 202, 202, 0.795);
+        border-radius: 10px;
+      }
+
+      legend {
+        color: darkblue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <fieldset>
+      <legend>Inscription</legend>
+      <label for="nom">Nom : </label>
+      <input type="text" id="nom" />
+      <label for="prenom">Prénom : </label>
+      <input type="text" id="prenom" />
+      <label for="email">Email :</label>
+      <input type="email" id="email" />
+      <label for="pwd">Mots de passe : </label>
+      <input type="password" id="pwd" />
+      <input type="submit" value="Envoyer" id="btn" />
+      <input type="reset" value="Annuler" id="btn" />
+    </fieldset>
+  </body>
+</html>
